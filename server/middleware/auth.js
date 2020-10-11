@@ -52,9 +52,9 @@ module.exports = auth;
 // });
 
 //   passport.use(new GoogleStrategy({
-//     clientID: '327367974510-biu703affa97ap3otrafclsqrhof9gs4.apps.googleusercontent.com',
-//     clientSecret: 'pIQXPYT4DiCR5MwdJPFvvK1a',
-//     callbackURL: "http://localhost:3001/auth/google/callback"
+//     clientID: process.env.GOOGLE_CLIENT_ID,
+//     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+//     callbackURL: process.env.GOOGLE_CALLBACK_URL
 //   },
 //   function(token, tokenSecret, profile, done) {
 //     console.log(profile,"sdnfjsadfbsfh")

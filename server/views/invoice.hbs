@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Invoice</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      .p-3 {
+        padding: 3rem !important;
+      }
+      .header h4 {
+        font-weight: 700;
+        color:  #2dd36f;
+      }
+      hr.new3 {
+        border: 1px solid
+      }
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: 8%;
+        font-size:20px ;
+      }
+      .footer .pfooter {
+        transform: translate(11px, 40px);
+      }
+<
+    </style>
+  </head>
+  <body>
+    <div class="container mt-0 p-3">
+      <div class="header">
+        <h4>RECEIPT</h4>
+        <div class="row">
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              {{username}}<br />
+              {{{address}}}<br />
+              </p>
+          </div>
+        </div>
+        <br /><br />
+        <div class="row">
+          <div class="col-sm-6">
+            <div>
+              <p>Recipet Number:&nbsp;&nbsp;&nbsp;<span><strong>{{orderRef}}</strong></span></p>
+              <p>
+                Receipt Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><strong>{{billing_date}}</strong></span>
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 ">
+            <div class="float-right">
+              <p>
+                Customer Ref no:&nbsp;&nbsp;&nbsp;<span
+                  >
+                  <strong>{{customerRef}}</strong>
+                  </span
+                >
+              </p>
+              <p>
+                Order Ref
+                no:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  ><strong>{{orderRef}}</strong></span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-12">
+          <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+            </thead>
+          <tr>
+            <td>
+               {{product_name}}
+            </td>
+            <td>
+                ₹ {{base_price}}
+            </td>
+            <td>
+              {{quantity}}
+            </td>
+            <td>
+             ₹ {{final_price}}
+            </td>
+          </tr>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
